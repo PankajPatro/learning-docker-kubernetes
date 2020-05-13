@@ -61,7 +61,6 @@ Open the learning.csproj file and remove the PublishSPAWebpack Target section
     &lt;Exec WorkingDirectory="$(SpaRoot)" Command="npm install" /&gt;
     &lt;Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" /&gt;
     &lt;Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " /&gt;
-
     &lt;!-- Include the newly-built files in the publish output --&gt;
     &lt;ItemGroup&gt;
       &lt;DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" /&gt;
