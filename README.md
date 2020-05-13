@@ -55,8 +55,7 @@ Check your application by running it from vs code. Hopefully it should work.
 Before you create a docker file to deploy your application, we have to change our application a bit.
 Open the learning.csproj file and remove the PublishSPAWebpack Target section
 
-```sh
-<strike>
+<del>
 &lt;Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish"&gt;
     &lt;!-- As part of publishing, ensure the JS resources are freshly built in production mode --&gt;
     &lt;Exec WorkingDirectory="$(SpaRoot)" Command="npm install" /&gt;
@@ -74,8 +73,8 @@ Open the learning.csproj file and remove the PublishSPAWebpack Target section
       &lt;/ResolvedFileToPublish&gt;
     &lt;/ItemGroup&gt;
   &lt;/Target&gt;
-</strike>
-````
+</del>
+
 
 We will understand later why we need to remove this step from csproj.
 
