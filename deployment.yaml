@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learning
+spec:
+  selector:
+    matchLabels:
+      app: learning
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: learning
+    spec:
+      containers:
+      - name: learning
+        image: learning
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+        resources:
+          limits: 
+           memory: "128Mi"
+           cpu: "250m"
