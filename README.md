@@ -151,6 +151,14 @@ Get your service url
 minikube service learning --url
 ```
 
+Only required to be done in windows as minikube has to tunnel 
+
+Run your service
+
+```cmd
+minikube service learning
+```
+
 Once you see your web application. You can do your clean up
 
 ```cmd
